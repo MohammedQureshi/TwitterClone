@@ -21,10 +21,10 @@ function Post({displayName, username, verified, text, image, avatar}) {
                         <h3 className="post__tagName">{username} · 10m</h3>
                     </div>
                     <div className="post__headerDescription">
-                        <p>This is my first tweet that is so awesome</p>
+                        <p>{text}</p>
                     </div>
                 </div>
-                <img src="https://media.giphy.com/media/AJIQNaQQ7TGcU/giphy.gif" alt="Octopus"/>
+                <img src={image} alt="Octopus"/>
                 <div className="post__footer">
                     <ChatBubbleOutlineIcon />
                     <RepeatIcon />

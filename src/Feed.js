@@ -11,11 +11,11 @@ function Feed() {
                 <h2>Home</h2><FlareIcon className="flareIconStyle" />
             </div>
             <TweetTextBox />
-            <Post displayName="LtConquer" username="@LtConquer" avatar="https://www.mohammedqureshi.co.uk/static/media/CircleProfile.168bb9d5.png" />
-            <Post displayName="Ninja" username="@Ninja" avatar="https://a.espncdn.com/photo/2018/0917/r432464_1600x800cc.jpg" />
-            <Post displayName="Fousey" username="@Fousey"/>
-            <Post displayName="MrBeast" username="@MrBeast"/>
-            <Post displayName="Clever Programmer" username="@CleverProgrammer"/>
+            <Post displayName="LtConquer" username="@LtConquer" avatar="https://www.mohammedqureshi.co.uk/static/media/CircleProfile.168bb9d5.png" text="This is my first wteet that is so awesome" image="https://media.giphy.com/media/AJIQNaQQ7TGcU/giphy.gif"/>
+            <Post displayName="Ninja" username="@Ninja" avatar="https://a.espncdn.com/photo/2018/0917/r432464_1600x800cc.jpg" text="The guy above me is weird" image="https://media1.giphy.com/media/EcIBDLleEN10NOMYa4/giphy.gif"/>
+            <Post displayName="Fousey" username="@Fousey" text="The guy above me is weird" image="https://media1.giphy.com/media/EcIBDLleEN10NOMYa4/giphy.gif"/>
+            <Post displayName="MrBeast" username="@MrBeast" text="The guy above me is weird" image="https://media1.giphy.com/media/EcIBDLleEN10NOMYa4/giphy.gif"/>
+            <Post displayName="Clever Programmer" username="@CleverProgrammer" text="The guy above me is weird" image="https://media1.giphy.com/media/EcIBDLleEN10NOMYa4/giphy.gif"/>
         </div>
     )
 }
