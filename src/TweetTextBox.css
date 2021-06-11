@@ -21,9 +21,17 @@
     border: none;
 }
 
+.tweetTextBox_input > input:focus {
+    outline-width: 0;
+}
+
 .tweetTextBox_imageInput {
     border: none;
     padding: 10px;
+}
+
+.tweetTextBox_imageInput:focus {
+    outline-width: 0;
 }
 
 .tweetTextBox__tweetButton {
