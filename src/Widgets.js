@@ -1,5 +1,6 @@
 import React from 'react'
 import './Widget.css'
+import NewArticle from './NewArticle'
 
 import SearchIcon from '@material-ui/icons/Search'
 
@@ -18,18 +19,20 @@ function Widgets() {
             </div>
             <div className="widgets__widgetContainer">
                 <h2>What's Happening</h2>
-                <TwitterTweetEmbed tweetId={"1403385368230117386"} />
-                <TwitterTimelineEmbed
-                sourceType="profile"
-                screenName="ltconquer"
-                options={{height: 400}}
-                />
+                <NewArticle articleTitle={"Tennis · LIVE"} articleContext={"2021 French Open: Nadal and Djokovic battle it out for a spot in the final"} />
+                <NewArticle articleTitle={"Trending in the United Kingdom"} articleContext={"#EURO2020"} />
+                <NewArticle articleTitle={"Entertainment · Trending"} articleContext={"dan howell"} />
+                <NewArticle articleTitle={"World news · LIVE"} articleContext={"Leaders from G7 nations meet in Cornwall, England for summit"} />
+                <h3>Show more</h3>
             </div>
-
-            <TwitterShareButton
-            url={"https://www.facebook.com/LtConquer"}
-            options={{text:"Gaming and Coding", via: "LtConquer"}}
-            />
+            <div className="widgets__widgetContainer">
+                <h2>Who to follow</h2>
+                <h3>Show more</h3>
+            </div>
+            <div className="widgets__widgetContainer">
+                <h2>Topics to follow</h2>
+                <NewArticle articleTitle={"Technology"} articleContext={"All about technology"} />
+            </div>
         </div>
     )
 }

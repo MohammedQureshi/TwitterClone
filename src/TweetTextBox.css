@@ -46,3 +46,14 @@
     margin-left: auto !important;
     padding: 0 20px;
 }
+
+.tweetTextBox__tweetIcon{
+    padding: 5px;
+    padding-top: 10px;
+    color: var(--twitter-colour)
+}
+
+.tweetTextBox__inputButtons{
+    display: flex;
+    padding-left: 75px;
+}

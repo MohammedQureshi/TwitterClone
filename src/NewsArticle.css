@@ -1,0 +1,18 @@
+.newArticle h3{
+    color: #8897A5;
+    font-size: 12px;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+.newArticle h2{
+    color: #000000;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.newArticle{
+    border-top: 1px solid #EBEEF0;
+    margin-top: 8px;
+    padding-bottom: 8px;
+}

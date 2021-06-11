@@ -11,12 +11,14 @@ function Post({displayName, username, verified, text, image, avatar}) {
     return (
         <div className="post">
             <div className="post_avatar">
-                <Avatar src="https://www.mohammedqureshi.co.uk/static/media/CircleProfile.168bb9d5.png" />
+                <Avatar src={avatar} />
             </div>
             <div className="post__body">
                 <div className="post__header">
                     <div className="post__headerText">
-                        <h3> LtConquer <span className="post__headerSpecial"> <VerifiedUserIcon className="post__badge"/> </span></h3>
+                        <h3> {displayName} </h3> 
+                        <span className="post__headerSpecial"> <VerifiedUserIcon className="post__badge"/> </span>
+                        <h3 className="post__tagName">{username} · 10m</h3>
                     </div>
                     <div className="post__headerDescription">
                         <p>This is my first tweet that is so awesome</p>
