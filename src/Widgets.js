@@ -4,12 +4,6 @@ import NewArticle from './NewArticle'
 
 import SearchIcon from '@material-ui/icons/Search'
 
-import {
-    TwitterTimelineEmbed,
-    TwitterShareButton,
-    TwitterTweetEmbed
-} from "react-twitter-embed"
-
 function Widgets() {
     return (
         <div className="widgets">
