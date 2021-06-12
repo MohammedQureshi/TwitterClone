@@ -1,21 +1,37 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './Feed.css'
 import TweetTextBox from './TweetTextBox'
 import Post from './Post'
 import FlareIcon from '@material-ui/icons/Flare';
+import db from './firebase';
 
 function Feed() {
+
+    const[posts, setPosts] = useState([]); 
+
+    useEffect(() => {
+        db.collection('posts').onSnapshot(snapshot => (
+            setPosts(snapshot.docs.map(doc => doc.data()))
+        ))
+    },[])
+    
     return (
         <div className="feed">
             <div className="feed__header">
                 <h2>Home</h2><FlareIcon className="flareIconStyle" />
             </div>
             <TweetTextBox />
-            <Post displayName="LtConquer" username="@LtConquer" avatar="https://www.mohammedqureshi.co.uk/static/media/CircleProfile.168bb9d5.png" text="This is my first wteet that is so awesome" image="https://media.giphy.com/media/AJIQNaQQ7TGcU/giphy.gif"/>
-            <Post displayName="Ninja" username="@Ninja" avatar="https://a.espncdn.com/photo/2018/0917/r432464_1600x800cc.jpg" text="The guy above me is weird" image="https://media1.giphy.com/media/EcIBDLleEN10NOMYa4/giphy.gif"/>
-            <Post displayName="Fousey" username="@Fousey" text="The guy above me is weird" image="https://media1.giphy.com/media/EcIBDLleEN10NOMYa4/giphy.gif"/>
-            <Post displayName="MrBeast" username="@MrBeast" text="The guy above me is weird" image="https://media1.giphy.com/media/EcIBDLleEN10NOMYa4/giphy.gif"/>
-            <Post displayName="Clever Programmer" username="@CleverProgrammer" text="The guy above me is weird" image="https://media1.giphy.com/media/EcIBDLleEN10NOMYa4/giphy.gif"/>
+
+            {posts.map(post => (
+                <Post 
+                    displayName={post.displayName}
+                    username={post.username}
+                    verified={post.verified}
+                    avatar={post.avatar}
+                    text={post.text}
+                    image={post.image}
+                />
+            ))} 
         </div>
     )
 }

@@ -17,14 +17,14 @@ function Post({displayName, username, verified, text, image, avatar}) {
                 <div className="post__header">
                     <div className="post__headerText">
                         <h3> {displayName} </h3> 
-                        <span className="post__headerSpecial"> <VerifiedUserIcon className="post__badge"/> </span>
-                        <h3 className="post__tagName">{username} · 10m</h3>
+                        <span className="post__headerSpecial"> {verified && <VerifiedUserIcon className="post__badge"/>} </span>
+                        <h3 className="post__tagName">{username}</h3>
                     </div>
                     <div className="post__headerDescription">
                         <p>{text}</p>
                     </div>
                 </div>
-                <img src={image} alt="Octopus"/>
+                <img src={image} alt=""/>
                 <div className="post__footer">
                     <ChatBubbleOutlineIcon />
                     <RepeatIcon />
