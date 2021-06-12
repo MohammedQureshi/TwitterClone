@@ -4,6 +4,7 @@ import TweetTextBox from './TweetTextBox'
 import Post from './Post'
 import FlareIcon from '@material-ui/icons/Flare';
 import db from './firebase';
+import FlipMove from 'react-flip-move'
 
 function Feed() {
 
@@ -21,9 +22,10 @@ function Feed() {
                 <h2>Home</h2><FlareIcon className="flareIconStyle" />
             </div>
             <TweetTextBox />
-
+            <FlipMove>
             {posts.map(post => (
                 <Post 
+                    key={post.text}
                     displayName={post.displayName}
                     username={post.username}
                     verified={post.verified}
@@ -32,6 +34,7 @@ function Feed() {
                     image={post.image}
                 />
             ))} 
+            </FlipMove>
         </div>
     )
 }
